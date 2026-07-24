@@ -1,6 +1,6 @@
 ### TypeScript
 
-_TypeScript is a SuperSet of JavaScript. Whatever the things are there in JavaScript will be included in TypeScript with Extra safety.It is a Programming language and it is compiled language. It is optionally Statically typed language._
+_TypeScript is a SuperSet of JavaScript. Whatever the things are there in JavaScript will be included in TypeScript with Extra safety.It is a Programming language and it is compiled or transpiled language. It is optionally Statically typed language._
 
 _TypeScript is a strongly typed, open-source programming language developed by Microsoft that builds directly on top of JavaScript. It is classified as a "strict superset" of JavaScript, meaning that any valid JavaScript code is automatically valid TypeScript code._
 
