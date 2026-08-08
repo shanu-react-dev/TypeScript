@@ -172,3 +172,9 @@ let age = 41;
 //   console.log(str);
 // }
 
+for (let i = 0; i <= 10; i++) {
+  if (i === 4 || i === 6) {
+    break;
+  }
+  console.log(i);
+}

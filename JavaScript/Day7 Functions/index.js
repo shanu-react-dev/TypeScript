@@ -26,8 +26,16 @@ function isLoggedIn() {
 //   console.log("You are logged in");
 // }
 
-// let data = isLoggedIn;
-// data();
+let data = isLoggedIn;
+data();
+isLoggedIn();
+
+// let myFun = function myFunction() {
+//   console.log(true, "From My Fun");
+// };
+// myFun();
+// // myFunction();
+// console.log(typeof myFun);
 
 // let a = 19;
 // let b = a;
@@ -200,4 +208,3 @@ function isLoggedIn() {
 
 // let exactVal = data.next();
 // console.log(exactVal);
-

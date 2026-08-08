@@ -57,6 +57,11 @@ console.log(undefined < 10);
 console.log(undefined > 10);
 console.log(10 < undefined);
 //! Assignment operators:- Assign values to the operands or variables
+let a = 10;
+let b = 11;
+a = a + b;
+a += b;
+
 //! Logical operators:- Used to group multiple operators
 //! Unary operators: Usually it is used with only one operand
 //! Ternary operators: Also known as conditional operator used to perform conditions
