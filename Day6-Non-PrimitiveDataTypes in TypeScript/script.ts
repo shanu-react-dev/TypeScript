@@ -70,7 +70,7 @@ obj3 = {
 console.log(obj3);
 
 let nestedArr: (number | object)[];
-nestedArr = [[19, 20], [20],];
+nestedArr = [[19, 20], [20]];
 console.log(nestedArr);
 
 export {};
