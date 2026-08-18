@@ -73,22 +73,22 @@
 // }
 //todo 3. Function Expression
 //? Function expression refers to a function which is stored inside a variable.
-let myFun = function () {
-  console.log("Hii this is one dabba function");
-};
-myFun();
+// let myFun = function () {
+//   console.log("Hii this is one dabba function");
+// };
+// myFun();
 
-let func2 = function Demo() {
-  console.log("Hii this is Dabba with Named as Demo");
-};
-func2();
+// let func2 = function Demo() {
+//   console.log("Hii this is Dabba with Named as Demo");
+// };
+// func2();
 //todo 4. IIFE Function
 //? IIFE stands for Immediately Invoked Function Expression, It is a function which will be executed just after declaration. We don't need to call it manually. It will be executed only once in the entire webpage lifetime.
 //Syntax:  (declaration)(execution)
-(function (a: number, b: number) {
-  console.log(a + b);
-  console.log("I am an IIFE function");
-})(10, 20);
+// (function (a: number, b: number) {
+//   console.log(a + b);
+//   console.log("I am an IIFE function");
+// })(10, 20);
 
 //todo 5. Arrow Function
 //todo 6. Higher Order Function
@@ -97,6 +97,77 @@ func2();
 //todo 9. Function Currying
 //todo 10. Generator Function
 
-let a = 10;
-let b = undefined;
+// let a = 10;
+// let b = undefined;
 // console.log(a + b);
+
+//! function
+// function demo(a: number, b: number) {
+//   return a + b;
+// }
+// let res = demo(10, 50);
+// console.log(res);
+
+function fullName(fName: string, lName: string): number | string {
+  // return "Shanu";
+  console.log(fName + " " + lName);
+  return fName + lName;
+}
+let data = fullName("Shanu", "Singh");
+console.log(data, "Returned from the function");
+
+//! FUNCTION type using type keyword
+
+// type FUNCTYPE = {
+//   (a: number, b: number): number;
+// };
+
+// let mySumFun: FUNCTYPE = function (a, b) {
+//   console.log("The sum of given Numbers", a + b);
+//   return a + b;
+// };
+// let res = mySumFun(20, 40);
+// console.log("The returned value from function", res);
+
+// let userName = "amarjeet";
+// function countOfa(userName: string): number {
+//   let count: number = 0;
+//   for (let i = 0; i < userName.length; i++) {
+//     if (userName[i] === "a") {
+//       count += 1;
+//     }
+//   }
+//   return count;
+// }
+// let a_Count = countOfa("kiruthikaa");
+// console.log(a_Count);
+
+// function repetitionOfLetter(word: string, letter: string): number {
+//   let count: number = 0;
+//   for (let i = 0; i < word.length; i++) {
+//     if (word[i] === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// let count = repetitionOfLetter("swapna sundari", "a");
+// console.log(count);
+
+function isPalindrome(word: string): boolean {
+  let str = "";
+  for (let i = word.length - 1; i >= 0; i--) {
+    // console.log(word[i]);
+    str = str + word[i];
+  }
+  console.log(str);
+  if (str === word) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+let palindRes = isPalindrome("malayalam");
+console.log(palindRes);

@@ -208,3 +208,9 @@ isLoggedIn();
 
 // let exactVal = data.next();
 // console.log(exactVal);
+
+function demo(a, b) {
+  return a - b;
+}
+let res = demo(10, null);
+console.log(res);
