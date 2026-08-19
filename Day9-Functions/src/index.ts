@@ -108,13 +108,13 @@
 // let res = demo(10, 50);
 // console.log(res);
 
-function fullName(fName: string, lName: string): number | string {
-  // return "Shanu";
-  console.log(fName + " " + lName);
-  return fName + lName;
-}
-let data = fullName("Shanu", "Singh");
-console.log(data, "Returned from the function");
+// function fullName(fName: string, lName: string): number | string {
+//   // return "Shanu";
+//   console.log(fName + " " + lName);
+//   return fName + lName;
+// }
+// let data = fullName("Shanu", "Singh");
+// console.log(data, "Returned from the function");
 
 //! FUNCTION type using type keyword
 
@@ -155,19 +155,84 @@ console.log(data, "Returned from the function");
 // let count = repetitionOfLetter("swapna sundari", "a");
 // console.log(count);
 
-function isPalindrome(word: string): boolean {
-  let str = "";
-  for (let i = word.length - 1; i >= 0; i--) {
-    // console.log(word[i]);
-    str = str + word[i];
-  }
-  console.log(str);
-  if (str === word) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function isPalindrome(word: string): boolean {
+//   let str = "";
+//   for (let i = word.length - 1; i >= 0; i--) {
+//     // console.log(word[i]);
+//     str = str + word[i];
+//   }
+//   console.log(str);
+//   if (str === word) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-let palindRes = isPalindrome("malayalam");
-console.log(palindRes);
+// let palindRes = isPalindrome("malayalam");
+// console.log(palindRes);
+
+//! Anonymous Function
+//? Anonymoius function generally used in passing arguments to another function such as higher order function or callback function or in other methods such as array methods or Object methods.
+// let myFunc = function () {
+//   //! storing a function inside a variable known as function expression
+//   let a = 10;
+//   let b = 20;
+//   console.log(a + b);
+// };
+// myFunc();
+
+//! IIFE function
+//? IIFE stands for Immediately Invoked Function Expression and it is a function which will be executed just after declaration. It executes only once in the entire webpage lifecycle.
+
+// let data = (function (a: string) {
+//   console.log(`Hii ${a}`); //! string interpolation
+//   console.log("This is an IIFE function");
+//   // return a.toUpperCase();
+// })("Shanu");
+
+// console.log(data);
+
+//! Arrow Function
+//? Arrow function is an ES6 feature is a shorthand function used to create a function without using function keyword.
+//syntax: () =>
+
+// let arrowFunc = () => console.log("This is an arrow function"); //! implicit return
+// arrowFunc();
+
+// let arrowFunc2 = () => {
+//   console.log("This is arrow function 2"); //! explicit return
+//   console.log("hii this is the second statement");
+// };
+// arrowFunc2();
+// arrowFunc2();
+
+// let arrowFunc3 = () => "Shanu";
+// let retVal = arrowFunc3();
+// console.log(retVal);
+
+// let arrowFunc4 = () => {
+//   return "Shanu Kumar Singh";
+// };
+
+// let retVal2 = arrowFunc4();
+// console.log(retVal2);
+
+//! higher Order Function and Callback Function
+//? HOF stands for Higher Order Function and it is a function which accepts another function as an argument. Callback function is a function which is passed as an argument.
+let HigherOrderFunc = (calculateAge: Function) => {
+  let currYear = 2026;
+  // console.log(calculateAge);
+  calculateAge(currYear);
+};
+
+let myFunc = (currYear: number) => {
+  let dob = 2003;
+  let currAge = currYear - dob;
+  console.log(currAge);
+};
+
+HigherOrderFunc(myFunc);
+
+//! nested function
+//? A function is declared inside a function is known as nested function
