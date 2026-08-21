@@ -183,17 +183,87 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // console.log(retVal2);
 //! higher Order Function and Callback Function
 //? HOF stands for Higher Order Function and it is a function which accepts another function as an argument. Callback function is a function which is passed as an argument.
-let HigherOrderFunc = (calculateAge) => {
-    let currYear = 2026;
-    // console.log(calculateAge);
-    calculateAge(currYear);
-};
-let myFunc = (currYear) => {
-    let dob = 2003;
-    let currAge = currYear - dob;
-    console.log(currAge);
-};
-HigherOrderFunc(myFunc);
+// let HigherOrderFunc = (calculateAge: Function) => {
+//   let currYear = 2026;
+//   // console.log(calculateAge);
+//   calculateAge(currYear);
+// };
+// let myFunc = (currYear: number) => {
+//   let dob = 2003;
+//   let currAge = currYear - dob;
+//   console.log(currAge);
+// };
+// HigherOrderFunc(myFunc);
 //! nested function
 //? A function is declared inside a function is known as nested function
+// function parent() {
+//   console.log("I am Parent");
+//   function child() {
+//     console.log("I am child");
+//     function grandChild() {
+//       console.log("I am grand child");
+//     }
+//     grandChild();
+//   }
+//   return child;
+// }
+// let res = parent();
+// console.log(res);
+// res();
+//! Function currying
+//? Function currying is a mechanism by which we cna call a returned function directly using one extra parantheses just after calling the outer function.
+//? Currying is a functional programming technique that transforms a function taking multiple arguments into a sequence of nested functions, each accepting exactly one argument.
+// parent()();
+//! closures
+//? closures is a special technique or feature of JS where an inner function can be able to accept outer function variables even after execution of parent function or outer function.
+// function parent() {
+//   let amt = 5000;
+//   console.log(`Amount from parent function ${amt}`);
+//   function child() {
+//     let receivedAmt = amt;
+//     console.log(`Amount received: ${receivedAmt}`);
+//   }
+//   return child;
+// }
+// let data = parent();
+// console.log(data);
+// data();
+//! Generator Function
+// function* demo() {
+//   yield console.log("First statement");
+//   yield console.log("Second statement");
+//   console.log("Third statement");
+//   console.log("Fourth statement");
+//   return "This is Generator function";
+// }
+// let data = demo();
+// console.log(data);
+// let retVal = data.next();
+// console.log(retVal);
+// retVal = data.next();
+// console.log(retVal);
+// retVal = data.next();
+// console.log(retVal);
+function* groupOfFunc() {
+    yield function () {
+        console.log("First Function");
+        return "First Function Executed";
+    };
+    yield () => "Shanu";
+    return "Generator function got completed";
+}
+let data = groupOfFunc();
+console.log(data);
+let a = data.next();
+console.log(a.value());
+data.next();
+let retval = data.next();
+console.log(retval);
+// let data = groupOfFunc();
+// console.log(data);
+// let res = data.next();
+// console.log(typeof res.done);
+// res.value();
+// res = data.next();
+// console.log(res.value());
 //# sourceMappingURL=index.js.map
