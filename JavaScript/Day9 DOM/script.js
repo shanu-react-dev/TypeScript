@@ -32,8 +32,8 @@
 //   console.log(data[i]);
 // }
 
-let data2 = document.getElementsByTagName("h1");
-console.log(data2); // HTML Collection
+// let data2 = document.getElementsByTagName("h1");
+// console.log(data2); // HTML Collection
 
 // data2.forEach((element) => {
 //   console.log(element);
@@ -44,39 +44,39 @@ console.log(data2); // HTML Collection
 // }
 
 //! querySelector
-let data = document.querySelector("input");
-console.log(data);
-data.style.background = "lightblue";
-data.style.border = "2px solid navy";
-data.style.outline = "none";
+// let data = document.querySelector("input");
+// console.log(data);
+// data.style.background = "lightblue";
+// data.style.border = "2px solid navy";
+// data.style.outline = "none";
 
-data.value = "I am Shanu";
-data.disabled = true;
+// data.value = "I am Shanu";
+// data.disabled = true;
 
-let password = document.querySelector(".password");
-console.log(password);
-password.style.background = "black";
-password.style.color = "white";
+// let password = document.querySelector(".password");
+// console.log(password);
+// password.style.background = "black";
+// password.style.color = "white";
 
-let reset = document.querySelector("button");
-console.log(reset);
-reset.style.color = "red";
+// let reset = document.querySelector("button");
+// console.log(reset);
+// reset.style.color = "red";
 
-let submit = document.querySelector("[type=submit]");
-console.log(submit);
-submit.style.color = "blue";
+// let submit = document.querySelector("[type=submit]");
+// console.log(submit);
+// submit.style.color = "blue";
 
 //! querySelectorAll
-let inputs = document.querySelectorAll("input");
-console.log(inputs);
+// let inputs = document.querySelectorAll("input");
+// console.log(inputs);
 // inputs.forEach((element) => {
 //   console.log(element);
 // });
 
-let lastPara = document.querySelector(".lastPara");
-console.log(lastPara);
-console.log(lastPara.children);
-console.log(lastPara.childNodes);
+// let lastPara = document.querySelector(".lastPara");
+// console.log(lastPara);
+// console.log(lastPara.children);
+// console.log(lastPara.childNodes);
 
 //! HTML Collection and Nodelist
 //? Both are an array like object and HTMLcollection contains only element nodes whereas Nodelist contains each and every node.
@@ -85,12 +85,39 @@ console.log(lastPara.childNodes);
 //? 1. innerHTML
 //? 2. innerText
 //? 3. textContent
-let demo = document.querySelector(".demo");
-console.log(demo);
-console.log(demo.innerHTML);
-console.log(demo.innerText);
-console.log(demo.textContent);
+// let demo = document.querySelector(".demo");
+// console.log(demo);
+// console.log(demo.innerHTML);
+// console.log(demo.innerText);
+// console.log(demo.textContent);
 
-demo.innerText = "Go dabba, <br/> Hiii";
-demo.innerHTML = "Go dabba, <br/> Hiii";
-demo.textContent = "Chalo Chai Peete hai";
+// demo.innerText = "Go dabba, <br/> Hiii";
+// demo.innerHTML = "Go dabba, <br/> Hiii";
+// demo.textContent = "Chalo Chai Peete hai";
+
+//! Creation of the elements / adding attributes to the elements
+// let heading = document.createElement("h2");
+// console.log(heading);
+// heading.innerText = "Hello from JavaScript";
+
+// document.body.appendChild(heading);
+
+// let box = document.querySelector(".box");
+// console.log(box);
+// box.style.height = "500px";
+// box.style.width = "500px";
+// box.style.border = "2px solid blue";
+
+// let image = document.createElement("img");
+// console.log(image);
+// image.setAttribute(
+//   "src",
+//   "https://cdn.pixabay.com/photo/2026/07/20/13/42/13-42-25-879_1280.jpg",
+// );
+
+// box.append(image);
+// box.style.overflow = "hidden";
+// image.style.height = "100%";
+// image.style.width = "100%";
+
+// box.remove();
